@@ -1,4 +1,4 @@
-# Python Oneliners
+# Python One liners
 This github repo is a collection of amazing python one liners which I regularly use which saved me a lot of time. 
 Feel free to add more to the list.
 
