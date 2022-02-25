@@ -5,7 +5,7 @@ Feel free to add more to the list.
 
 # Index
 * [Sort a dictionary based on multiple conditions](#Sort-a-dictionary-based-on-multiple-conditions)
-* [Thousand Separator](#combine-strings-from-a-list)
+* [Thousand Separator]
 * [Multiply all elements of a list](#combine-two-lists-to-dictionary)
 * [Flatten a List](#common-element-between-two-lists)
 * [Remove duplicate elements from a list](#convert-decimal-to-binary)
@@ -39,7 +39,7 @@ new_d={k:v for k,v in n_l}
 ```python
 n=10000000
 
-new_number=f'{n:, }
+new_number=f'{n:, }'
 
 # new_number = 10,000,000
 ```
@@ -97,7 +97,7 @@ freq_ele=Counter(1).most common()[O][O]
 # 'HI MY NAME IS ALLWIN'
 ```
 
-### convert string to bytes
+### Converting string to byte
 ```python
 s="My name is fox and fox is an animal"
 
@@ -106,487 +106,84 @@ s.encode()
 # b'My name is fox and fox is an animal'
 ```
 
-### copy files
+### Transpose a Matrix
 ```python
-import shutil; shutil.copyfile('source.txt', 'dest.txt')
-```
-
-### deleting multiple elements from a list
-```python
-li = [1, 2, 3, 4, 5]
-del li[0:3] 
-# [4, 5]
-```
-
-### execute strings
-```
-exec('print("hello world!")')
-# hello world!
-```
-
-### fibonacci series
-```python
-lambda x: x if x<=1 else fib(x-1) + fib(x-2)
-```
-
-### fizzbuzz
-```python
-n = 20
-print('\n'.join('Fizz' * (i%3==0) + 'Buzz' * (i%5==0) or str(i) for i in range(1, n)))
-
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-```
-
-### half pyramid
-```python
-n = 5
-print('\n'.join('* ' * i for i in range(1, n + 1)))
-
-*
-* *
-* * *
-* * * *
-* * * * *
-```
-
-### quick sort
-```python
-qsort = lambda l : l if len(l)<=1 else qsort([x for x in l[1:] if x < l[0]]) + [l[0]] + qsort([x for x in l[1:] if x >= l[0]])
-```
-
-### sum of n consecutive numbers
-```python
-sum(range(0, n+1))
-```
-
-### swap two values
-```python
-a,b = b,a
-```
-
-### flatten list
-``` python
-[item for sublist in main_list for item in sublist]
-```
-
-Using itertools
-```python
-import itertools
-print(list(itertools.chain.from_iterable(a_list)))
-[1, 2, 3, 4, 5, 6]
-```
-
-### starting a http server
-```python
-python3 -m http.server 8000
-python2 -m SimpleHTTPServer
-```
-
-### factorial of a number
-```python
-import math; fact_5 = math.factorial(5)
-```
-
-### floor division result
-```python
-print(5//2)
-# 2
-```
-
-### for and if
-```python
-new_li = [number for number in [1, 2, 3, 4] if number % 2 == 0]
-# [2, 4]
-```
-
-### lambda function with if else
-```python
-list(map(lambda x: x if x%2==0 else x+1, [1, 2, 3, 4]))
-# [2, 2, 4, 4]
-# converts only odd numbers to even numbers by adding 1 to it
-```
-
-### longest string in a list
-```python
-# words = ['This', 'is', 'a', 'list', 'of', 'words']
-max(words, key=len)
-# 'words'
-```
-
-### list comprehension
-```python
-li = [num for num in range(0,100)]
-# this will create a list of numbers from 0 to 99
-```
-
-### set comprehension
-```python
-num_set = { num for num in range(0,100)}
-# this will create a set of numbers from 0 to 99
-```
-
-### dictionary comprehension
-```python
-dict_numbers = {x:x*x for x in range(0,5) }
-```
-
-### if else
-```python
-print("even") if 4%2==0 else print("odd")
-```
-
-### infinite while loop
-```python
-while 1:0
-```
-
-### check data type
-```python
-isinstance(2, int)
-isinstance("allwin", str)
-isinstance([3,4,1997], list)
-```
-
-### while loop
-```python
-a=5
-while a > 0: a = a - 1; print(a)
-```
-
-### write to a file using print
-```python
-print("Hello, World!", file=open('file.txt', 'w'))
-```
-
-### count occurence of a character in a string
-```python
-print("umbrella".count('l'))
-```
-
-### max value key
-```python
-d = {320: 1, 321: 0, 322: 3}
-max_value_key = max(d, key=d.get)
-
-# 322
-```
-
-### merge two lists
-```python
-list1.extend(list2)
-# contents of list 2 will be added to the list1
-```
-
-or
-```python
-[1, 2] + [3, 4]
-# [1, 2, 3, 4]
-```
-
-### merge two dictionaries
-```python
-dict1.update(dict2)
-# contents of dictionary 2 will be added to the dictionary 1 
-```
-
-### merge two sets
-```python
-set1.update(set2)
-# contents of set2 will be copied to the set1
-```
-
-### min value key
-```python
-d = {320: 1, 321: 0, 322: 3}
-min_value_key = min(d, key=d.get)
-
-# 321
-```
-
-
-### get timestamp
-```python
-import time; print(time.time())
-```
-
-### most frequent element in a list
-```python
-numbers = [9, 4, 5, 4, 4, 5, 9, 5, 4]
-most_frequent_element = max(set(test_list), key=test_list.count)
-# 4
-```
-```python
-from collections import Counter
-
-numbers = [9, 4, 5, 4, 4, 5, 9, 5, 4]
-print(list(Counter(numbers).most_common()))
-# [(4, 4), (5, 3), (9, 2)]
-```
-
-### nested list comprehension
-```python
-numbers = [[num] for num in range(10)]
-# [[0], [1], [2], [3], [4], [5], [6], [7], [8], [9]]
-```
-
-### object creation
-```python
-obj_1 = type('obj_1', (object,), {'property': 'value'})()
-```
-
-### octal to decimal
-```python
-print(int('30', 8)) 
-# 24
-```
-
-### repeat values in a list for n time
-```python
-import itertools; print(list(itertools.repeat(10,5)))
-# [10, 10, 10, 10, 10] will be printed
-```
-
-### generate a random number of n digits
-```python
-from random import randint; print(''.join(["{}".format(randint(0, 9)) for num in range(0, n)]))
-# This will print 1038496714 given the value of n=10
-```
-
-### get quotient and remainder
-```python
-quotient, remainder = divmod(4,5)
-```
-
-### python zen
-```python
-import this
-```
-
-### remove duplicate elements from a list
-```python
-list(set([4, 4, 5, 5, 6]))
-```
-
-### sort list in ascending order
-```python
-sorted([5, 2, 9, 1])
-```
+martix = [[1, 2, 3], [3, 4, 6], [5, 6, 7]] 
 
-### sort list in descending order
-```python
-sorted([5, 2, 9, 1], reverse=True)
-```
-
-### get a string of small case alphabets
-```python
-import string; print(string.ascii_lowercase)
-# abcdefghijklmnopqrstuvwxyz
-```
-
-### get a string of upper case alphabets
-```python
-import string; print(string.ascii_uppercase)
-# ABCDEFGHIJKLMNOPQRSTUVWXYZ
-```
-
-### get a string of digits from 0 to 9
-```python
-import string; print(string.digits)
-# 0123456789
-```
+1=list(list(x) for x in zip(*matrix))
 
-### get individual digits from a number
-```python
-digits = [int(digit) for digit in str(12345)]
-```
-
-### hexadecimal to decimal
-```python
-print(int('da9', 16))
-# 3497 
+# 1 = [[1, 3, 5], [2, 4, 6], [3, 6, 7]]
 ```
 
-### hypotenuse
+### Element wise addition of 2 lists
 ```python
-import math; math.hypot(8, 6)
-```
+first = [1,2,3,4,5]
 
-### human readable datetime
-```python
-import time; print(time.ctime())
-# Thu Aug 13 20:16:23 2020
-```
+second = [6,7,8,9,10]
 
-### convert a list of strings to integers
-```python
-list(map(int, ['1', '2', '3']))
-# [1, 2, 3]
-```
+final=[x + y for x, y in zip(first, second)]
 
-### combine strings from a list
-```python
-" ".join(["hello", "world"])
-# "hello world"
+# final = [7, 9, 11, 13, 15]
 ```
 
-### combine two lists to dictionary
-```python
-dict(zip([1,2,3,4], ['a','b','c','d']))
-{1: 'a', 2: 'b', 3: 'c', 4: 'd'}
+### Convert ASCII value to Character and vice versa
 ```
+ord('a') # 97
 
-### common element between two lists
-```python
-list1 = [1, 2, 4, 5]
-list2 = [6, 8, 4, 2]
-
-print(set(list1) & set(list2))
-print(set(list1).intersection(set(list2)))
-# {2, 4}
-```
+chr(97) # a
 
-### get even numbers from a list
-```python
-list(filter(lambda x: x%2 == 0, [1, 2, 3, 4, 5, 6] ))
-# [2, 4, 6]
+chr(ord('a') + 3) #d
 ```
 
-### input a list of tuples
+### Print all combinations of elements in a List
 ```python
-list(tuple(map(int, input().split())) for r in range(int(input('enter the no of rows:'))))
-# enter the no of rows:
-# 3
-# 1 2
-# 3 4
-# 5 6
-# [(1, 2), (3, 4), (5, 6)]
-```
+from itertools import combinations, combinations_with_replacement
 
-### performance profiling
-```shell
-$ python -m cProfile foo.py
-```
+nums = [1,2,3,4]
 
-### permutation
-```python
-from itertools import permutations
-print([''.join(perm) for perm in permutations('abc')])
+list(combinations(nums, 2)) # [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
 
-# ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
-```
+list(combinations_with_replacement(nums, 2)) # [(1, 1), (1, 2), (1, 3), (1, 4), (2, 2), (2, 3), (2, 4), (3, 3), (3, 4), (4, 4)]
 
-### prefix sum
-```python
-import itertools
-prefix_sum = itertools.accumulate([1, 2, 3, 4, 5])
-print(list(prefix_sum))
-
-# [1, 3, 6, 10, 15]
+list(combinations (nums, 3)) # [(1, 2, 3), (1, 2, 4), (1, 3, 4), (2, 3, 4)]
 ```
 
-### prime numbers in a range
+### Input space separated integers in a list
 ```python
-primes = list(filter(lambda x:all(x % y != 0 for y in range(2, x)), range(2, 100)))
-print(primes)
-# [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+l = list(map(int, input().split()))
 ```
 
-### remove numbers from string
+### Read file in python and input it to a list
 ```python
-''.join(list(filter(lambda x: x.isalpha(), 'abc123def4fg56vcg2')))
-# abcdeffgvcg
+one-liner.py
+l = [line.strip() for line in open('abc.txt', 'r')]
 ```
 
-### replace words in a sentence
+### Nested for loops via List comprehension
 ```python
-string = "He is a good boy"
-string.replace('good', 'bad')
-# returns 'he is a bad boy'
-```
+l1 = [1, 2, 3, 4]
 
-### replace with regular expression
-```python
-# replace everythin in one go
-
-import re
-re.sub(r'[.+()@]', '', 'A(ll+wi)@n.')
-# 'Allwin'
-```
+l2 = ['a', 'b', 'c']
 
-### replace multiple spaces
-```python
-# replace-multiple-spaces
-s = 'string with  multiple    spaces and \n\n new lines'
-' '.join(s.split()) # 'string with multiple spaces and new lines'
-```
+l = [(x, y) for x in l1 for y in l2]
 
-### reverse a list
-```python
-numbers[::-1]
+# [(1, 'a'), (1, 'b'), (1, 'c'), (2, 'a'), (2, 'b'), (2, 'c'), (3, 'a'), (3, 'b'), (3, 'c'), (4, 'a'), (4, 'b'), (4, 'c')]
 ```
 
-### rotate a list
+### Find All Indices of an Element in a List
 ```python
-# li = [1,2,3,4,5]
-# right to left
-li[n:] + li[:n] # n is the no of rotations
-li[2:] + li[:2]
-[3, 4, 5, 1, 2]
-# left to right
-li[-n:] + li[:-n]
-li[-1:] + li[:-1] 
-[5, 1, 2, 3, 4]
-```
+lst = ['a', 'v', 'a', 'c', 'z']
 
-### sort dictionary with values
-```python
-# x = {1: 2, 3: 4, 4: 3, 2: 1, 0: 0}
-{k: v for k, v in sorted(x.items(), key=lambda item: item[1])}
-# {0: 0, 2: 1, 1: 2, 4: 3, 3: 4}
-```
+indices = [i for i in range(len(lst)) if lst[i]=='a']
 
-### sort dictionary with key
-```python
-# {'one': 1, 'four': 4, 'eight': 8}
-{key:d[key] for key in sorted(d.keys())}
-# {'eight': 8, 'four': 4, 'one': 1}
+# [0, 2]
 ```
 
-### substring in a string
+### Convert number of any base to decimal
 ```python
-'sent' in 'sentence'
-# returns True
-```
+int('30', 8) # 24
 
-### transpose matrix
-```python
-list(list(x) for x in zip(*old_list))
-# old_list = [[1, 2, 3], [3, 4, 6], [5, 6, 7]]
-# [[1, 3, 5], [2, 4, 6], [3, 6, 7]]
-```
+int('1011', 2) # 11
 
-### unpacking elements
-```python
-a, *b, c = [1, 2, 3, 4, 5]
-print(a) # 1
-print(b) # [2, 3, 4]
-print(c) # 5
+int('1A', 16) # 26
 ```
