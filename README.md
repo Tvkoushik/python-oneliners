@@ -5,22 +5,22 @@ Feel free to add more to the list.
 
 # Index
 * [Sort a dictionary based on multiple conditions](#Sort-a-dictionary-based-on-multiple-conditions)
-* [Thousand Separator]
-* [Multiply all elements of a list](#combine-two-lists-to-dictionary)
-* [Flatten a List](#common-element-between-two-lists)
-* [Remove duplicate elements from a list](#convert-decimal-to-binary)
-* [Get quotient and remainder](#convert-decimal-to-octal)
-* [Most frequent element of a List](#convert-deciaml-to-hexadecimal)
-* [Convert string to upper case](#convert-deciaml-to-hexadecimal)
-* [Converting string to byte](#convert-a-list-of-strings-to-integers)
-* [Transpose a Matrix](#convert-key-value-pair-to-dictionary)
-* [Element wise addition of 2 lists](#convert-string-to-lower-case)
-* [Convert ASCII value to Character and vice versa](#convert-string-to-upper-case)
-* [Print all combinations of elements in a List](#convert-string-to-bytes)
-* [Input space separated integers in a list](#copy-files)
-* [Nested for loops via List comprehension](#count-occurence-of-a-character-in-a-string)
-* [Find All Indices of an Element in a List](#count-occurence-of-a-character-in-a-string)
-* [Convert number of any base to decimal](#count-occurence-of-a-character-in-a-string)
+* [Thousand Separator](#Thousand Separator)
+* [Multiply all elements of a list](#Multiply all elements of a list)
+* [Flatten a List](#Flatten a List)
+* [Remove duplicate elements from a list](#Remove duplicate elements from a list)
+* [Get quotient and remainder](#Get quotient and remainder)
+* [Most frequent element of a List](#Most frequent element of a List)
+* [Convert string to upper case](#Convert string to upper case)
+* [Converting string to byte](#Converting string to byte)
+* [Transpose a Matrix](#Transpose a Matrix)
+* [Element wise addition of 2 lists](#Element wise addition of 2 lists)
+* [Convert ASCII value to Character and vice versa](#Convert ASCII value to Character and vice versa)
+* [Print all combinations of elements in a List](#Print all combinations of elements in a List)
+* [Input space separated integers in a list](#Input space separated integers in a list)
+* [Nested for loops via List comprehension](#Nested for loops via List comprehension)
+* [Find All Indices of an Element in a List](#Find All Indices of an Element in a List)
+* [Convert number of any base to decimal](#Convert number of any base to decimal)
 
 
 ### Sort a dictionary based on multiple conditions
