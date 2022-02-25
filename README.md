@@ -11,6 +11,7 @@ Feel free to add more to the list.
 * [Remove duplicate elements from a list](#convert-decimal-to-binary)
 * [Get quotient and remainder](#convert-decimal-to-octal)
 * [Most frequent element of a List](#convert-deciaml-to-hexadecimal)
+* [Convert string to upper case](#convert-deciaml-to-hexadecimal)
 * [Converting string to byte](#convert-a-list-of-strings-to-integers)
 * [Transpose a Matrix](#convert-key-value-pair-to-dictionary)
 * [Element wise addition of 2 lists](#convert-string-to-lower-case)
@@ -25,59 +26,84 @@ Feel free to add more to the list.
 ### Sort a dictionary based on multiple conditions
 
 ```python
-d={'IN':2, 'GE':2, 'AK':3, 'BEG":1}
+d={'IN':2, 'GE':2, 'AK':3, 'BEG':1}
 
 n_l=[sorted (d.items(), key=lambda x: (x[1], len(x[0]),x[0])))
 
-new_d={k:v for k,v in n_l} # new_d = {'BEG': 1, 'GE': 2, 'IN': 2, 'AK': 3}
+new_d={k:v for k,v in n_l} 
+
+# new_d = {'BEG': 1, 'GE': 2, 'IN': 2, 'AK': 3}
 ```
 
 ### Thousand Separator
 ```python
 n=10000000
 
-new_number=f'{n:, }'
+new_number=f'{n:, }
 
 # new_number = 10,000,000
 ```
-### convert decimal to binary
+### Multiply all elements of a list
 ```python
-bin(24)
+from numpy_import prod from functools import reduce
+
+1=[2,3,4,4,5,6]
+
+v1=prod(1) # 2880 
+
+v2=reduce((lambda x, y: x * y), 1) #2880
 ```
 
-### convert decimal to hexadecimal
+### Flatten a List
 ```python
-hex(24)
+1 = [[7,6], [4, 6], [8, 10]]
+
+flattened = [i for j in 1 for i in j]
+
+# flattened = [7, 6, 4, 6, 8, 10]
 ```
 
-### convert decimal to octal
+### Remove duplicate elements from a list
 ```python
-oct(24)
+1 = [4,4,5,5,6]
+
+new_l=list(set(1))
+
+# new_1 = [4,5,6]
 ```
 
-### convert key value pair to dictionary
+### Get quotient and remainder
 ```python
-dict(name='allwin', age=23)
+quotient, remainder = divmod(10,5)
+
+# quotient, remainder = 2,0
 ```
 
-### convert string to lower case
+### Most frequent element of a List
 ```python
-"Hi my name is Allwin".lower()
-# 'hi my name is allwin'
-"Hi my name is Allwin".casefold()
-# 'hi my name is allwin'
+from collections import Counter
+
+1 = [1,1,3,4,1,5,6,7,7,2,9]
+
+freq_ele=Counter(1).most common()[O][O]
+
+# freq_ele = 1
 ```
 
-### convert string to upper case
+### Convert string to upper case
 ```python
 "hi my name is Allwin".upper()
+
 # 'HI MY NAME IS ALLWIN'
 ```
 
 ### convert string to bytes
 ```python
-"convert string to bytes using encode method".encode()
-# b'convert string to bytes using encode method'
+s="My name is fox and fox is an animal"
+
+s.encode()
+
+# b'My name is fox and fox is an animal'
 ```
 
 ### copy files
